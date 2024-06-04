@@ -1,6 +1,6 @@
 import express from "express";
 const  router = express.Router();
-import {register , login} from '../Controller/RedisterAdmin';
+import {register , login} from '../Controller/RegisterAdmin.js';
 
 
 router.post('/register', register);
