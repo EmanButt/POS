@@ -12,5 +12,5 @@ const Whkregister = mongoose.Schema({
     }
 })
 
-const RegisterWhk = mongoose.model("AdminRegister", Whkregister)
+const RegisterWhk = mongoose.model("WhkRegister", Whkregister)
 export default RegisterWhk;

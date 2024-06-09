@@ -12,5 +12,5 @@ const adminregister = mongoose.Schema({
     }
 })
 
-const registeradmin = mongoose.model("admin", adminregister)
+const registeradmin = mongoose.model("AdminRegister", adminregister)
 export default registeradmin;

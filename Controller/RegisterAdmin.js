@@ -31,30 +31,7 @@ const register = async (req, res) => {
     }
 
 }
-// const login = async (req, res) => {
-//     try {
-//         const { Email, Password } = req.body;
-//         const login = await registeradmin.findOne({ Email: Email})                // pehli Email database sa fetch kr rhai hn aur dosra emial hum uper user sa get kr rhai hn
-//         console.log(login)
-//         const token = JWT.sign({id:"_id"},`${process.env.PRIVATEKEY}`,{expiresIn:'1h'});
-//         // console.log(token);
-//         if (login) {
-//             res.status(200).send({
-//                 message: "login OK"
-//             })
-//         }
-//         else {
-//             res.send({
-//                 message: "login not ok"
-//             })
-//         }}
-//         catch (error) {
-//             console.log(error)
-//             res.send({
-//                 message: "Server error"
-//             })
-//         }
-//     }
+
 
 const login = async (req, res) => {
     try {
@@ -91,39 +68,3 @@ const login = async (req, res) => {
 }
 export { register, login };
 
-//     try {
-//         const { Email, Password } = req.body;
-        
-//         // Fetch user from database
-//         const user = await registeradmin.findOne({ Email: Email });
-        
-//         if (user) {
-//             // Verify password (assuming bcrypt is used for hashing passwords)
-//             const isPasswordValid = await bcrypt.compare(Password, user.Password);
-            
-//             if (isPasswordValid) {
-//                 // Generate JWT token
-//                 const token = JWT.sign({ id: user._id }, process.env.PRIVATEKEY, { expiresIn: '1h' });
-//                 console.log(token);
-
-//                 res.status(200).send({
-//                     message: "login OK",
-//                     token: token
-//                 });
-//             } else {
-//                 res.status(401).send({
-//                     message: "Invalid password"
-//                 });
-//             }
-//         } else {
-//             res.status(404).send({
-//                 message: "User not found"
-//             });
-//         }
-//     } catch (error) {
-//         console.log(error);
-//         res.status(500).send({
-//             message: "Server error"
-//         });
-//     }
-// };
