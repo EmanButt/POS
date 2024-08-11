@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const adminregister = mongoose.Schema({
+const admindatabase = mongoose.Schema({
     Email:{
     required: true,
     type:String
@@ -12,5 +12,5 @@ const adminregister = mongoose.Schema({
     }
 })
 
-const registeradmin = mongoose.model("AdminRegister", adminregister)
-export default registeradmin;
+const adminregisterindatabase = mongoose.model("admindatabase",admindatabase )
+export default adminregisterindatabase;

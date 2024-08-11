@@ -1,9 +1,9 @@
 import bcrypt from "bcrypt";
 import JWT from 'jsonwebtoken';
-import registeradmin from '../Model/AdminSchema.js'
+import adminregisterindatabase from '../Model/AdminSchema.js'
 
 
-const register = async (req, res) => {
+const registeradmin = async (req, res) => {
     try {
         const Email = 'ebutt@gmail.com';
         const Password = '12345';
@@ -13,9 +13,9 @@ const register = async (req, res) => {
 
 
         if (Email === 'ebutt@gmail.com' && Password === '12345') {
-            const saveuser = registeradmin({ Email, Password: hash_password }).save();
+            const saveuser = adminregisterindatabase({ Email, Password: hash_password }).save();
             res.send({
-                message: 'Login OK'
+                message: 'Register OK'
             })
         }
         else {
@@ -33,10 +33,10 @@ const register = async (req, res) => {
 }
 
 
-const login = async (req, res) => {
+const loginadmin = async (req, res) => {
     try {
         const { Email, Password } = req.body;
-        const login = await registeradmin.findOne({ Email: Email })                // pehli Email database sa fetch kr rhai hn aur dosra emial hum uper user sa get kr rhai hn
+        const login = await adminregisterindatabase.findOne({ Email: Email })                // pehli Email database sa fetch kr rhai hn aur dosra emial hum uper user sa get kr rhai hn
         if (login) {            // compare password with database
             const isPAsswordValid = await bcrypt.compare(Password, login.Password)
         
@@ -66,5 +66,5 @@ const login = async (req, res) => {
         })
     }
 }
-export { register, login };
+export { registeradmin, loginadmin };
 
