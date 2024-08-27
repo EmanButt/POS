@@ -1,0 +1,98 @@
+/* Container styling to accommodate sidebar */
+.add-quiz-question {
+  display: flex;
+  flex-direction: column;
+  margin-left: 300px; 
+  padding: 15px;
+  background-color: #f9f9f9; 
+  min-height: 50vh; /* Ensure the container takes full height */
+  color: black;
+}
+
+/* Form styling */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #fff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+ 
+}
+
+/* Header styling */
+h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Dark color for the header */
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 10px;
+  
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+   /* Dark color for labels */
+}
+
+/* Input and select field styling */
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  color: #333;
+  background-color: #fff; /* White background for input fields */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Button styling */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient( #3BCAC6, #EFA880);
+  color: white; /* White text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for options displayed side by side */
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between options */
+}
+
+/* Adjust styling for each option */
+.option-group {
+  flex: 1; /* Allows each option to grow and shrink as needed */
+  min-width: calc(50% - 10px); /* Ensure two options fit side by side with some gap */
+}
+
+/* Optional: Adjust responsiveness */
+@media (max-width: 768px) {
+  .add-quiz-question {
+    margin-left: 0; /* Remove left margin on smaller screens */
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  .option-group {
+    min-width: 100%; /* Stack options vertically on smaller screens */
+  }
+}

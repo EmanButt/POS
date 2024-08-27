@@ -1,0 +1,76 @@
+/* Sidebar styling */
+
+body{
+    background-color: #D9D9D9;
+}
+ 
+  /* Main container styling */
+  .container {
+    background-color: white;
+    width: 1106px; /* Fixed width */
+    height: 239px; /* Fixed height */
+    padding: 20px; /* Padding for content inside */
+    margin-right: 20px; /* Margin between container and sidebar */
+    border-color: #333;
+  
+  }
+  
+  /* Question container styling */
+  .questions_container {
+    background-color: white;
+    margin-bottom: 20px; /* Space below the question container */
+    font-size: 18px; /* Adjust font size */
+    color: #333; /* Dark text color */
+  }
+  
+  /* Option container styling */
+  .option_container {
+    background-color: white;
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Allow options to wrap to the next line */
+    gap: 20px; /* Space between options */
+  }
+  
+  .option-btn {
+    background-color: white;
+    width: 513px; /* Fixed width for option buttons */
+    height: 50px; /* Fixed height for option buttons */
+    border: 1px solid black; /* Border for buttons */
+    font-size: 16px; /* Font size */
+    color: black; /* Dark text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  
+  .option-btn:hover {
+    background-color: #ddd; /* Darker grey on hover */
+  }
+  
+  .option-btn.checked {
+    background-color: #4caf50; /* Green background if option is selected */
+    color: #fff; /* White text color */
+  }
+  
+  /* Button styling for Next and Previous buttons */
+  input[type="button"] {
+    width: 228px; /* Fixed width */
+    height: 54px; /* Fixed height */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    margin-right: 20px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-image 0.5s ease; /* Smooth transition for gradient */
+  }
+  
+  input[type="button"]:hover {
+    background-image: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background on hover */
+  }
+  
+  /* Clearfix for floated elements */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
